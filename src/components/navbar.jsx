@@ -1,7 +1,7 @@
 import { Search, Menu, Sun, Bell } from "lucide-react";
 import "./navbar.css";
 
-function Navbar() {
+function Navbar({ isDarkPage, onToggleTheme }) {
   return (
     <header className="navbar">
       <div className="navbar-search">
@@ -20,10 +20,11 @@ function Navbar() {
         <button
           className="navbar-button"
           type="button"
-          aria-label="Toggle theme"
-          title="Toggle theme"
+          aria-label={isDarkPage ? "Switch page to light mode" : "Switch page to dark mode"}
+          title={isDarkPage ? "Switch page to light mode" : "Switch page to dark mode"}
+          onClick={onToggleTheme}
+          aria-pressed={isDarkPage}
         >
-          
           <Sun size={18} />
         </button>
         <button

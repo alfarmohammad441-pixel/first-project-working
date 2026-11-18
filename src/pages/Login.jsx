@@ -6,6 +6,8 @@ import { Authcontext } from "../context/Authcontext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const usersApiUrl =
+  process.env.REACT_APP_API_backendURL5;
 
 export default function Login() {
  const navigate=useNavigate()
@@ -14,15 +16,48 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  function options(values) {
-    axios
-    .get(process.env.REACT_APP_API_backendURL5, {
-   
-    })
-     .then((response) => { 
-        setUsers(response.data);
-        navigate("/dashboard");
-    });
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function options() {
+    if (!username.trim() || !password) {
+      setError("Enter your username and password.");
+      return;
+    }
+
+    setError("");
+    setIsLoading(true);
+    try {
+      const { data: users } = await axios.get(usersApiUrl, { timeout: 10000 });
+      if (!Array.isArray(users)) {
+        throw new Error("The login service returned an invalid response.");
+      }
+
+      const user = users.find(
+        (candidate) =>
+          candidate.username?.trim() === username.trim() &&
+          candidate.password === password
+      );
+      if (!user) {
+        setError("Incorrect username or password.");
+        return;
+      }
+
+      setUsers(user);
+      navigate("/dashboard");
+    } catch (requestError) {
+      if (axios.isAxiosError(requestError)) {
+        setError(
+          requestError.response
+            ? `Login service error (${requestError.response.status}).`
+            : "Could not connect to the login service. Make sure the backend is running."
+        );
+      } else {
+        console.error(requestError);
+        setError("An unexpected error occurred while signing in.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -93,8 +128,13 @@ export default function Login() {
 
           {error && <p className="login-error">{error}</p>}
 
-          <button type="button" className="login-button" onClick={options}>
-            login
+          <button
+            type="button"
+            className="login-button"
+            onClick={options}
+            disabled={isLoading}
+          >
+            {isLoading ? "Signing in..." : "login"}
           </button>
 
           <p className="copyright">© 2026 University Management System</p>

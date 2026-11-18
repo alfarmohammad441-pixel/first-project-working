@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://alfarmohammad441-pixel.github.io/first-project-working",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alfarmohammad441-pixel/first-project-working.git"
-  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",

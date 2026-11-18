@@ -183,6 +183,11 @@
 
 }
 
+.login-error {
+  margin: 14px 0 0;
+  color: #b42318;
+  font-size: 13px;
+}
 
 .login-button {
   width: 100%;

@@ -40,7 +40,7 @@ export default function Student() {
         <TableContainer component={Paper}></TableContainer>
         <div className="search">
           <Search size={30} />
-          <input type="text" placeholder="Search..." />
+          <input type="text" placeholder="Search..."/>
         </div>
         <button className="studentbutton">filter</button>
         <div className="student">
