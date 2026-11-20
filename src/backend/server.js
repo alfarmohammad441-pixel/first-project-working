@@ -98,6 +98,14 @@ app.get("/examcenter", async (_, res) => {
   }
 });
 
+app.get("/totalstudent", async (_, res) => {
+  try {
+    res.json(await query("SELECT COUNT(studenttable.ID)As totalStudent FROM studenttable"));
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 const PORT = process.env.PORT || 3500;
 
 app.listen(PORT, () => {
