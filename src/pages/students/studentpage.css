@@ -204,24 +204,26 @@ textarea {
 .total-subject {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(136, 5, 5);
+  box-shadow: 0px 1px 20px rgb(136, 5, 5);
   width: 200px;
   padding: 15px;
   color: rgba(161, 6, 6, 0.653);
   font-size: larger;
-  border-color: rgba(255, 0, 0, 0.596);
+  border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
 }
 
 .total-student {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(9, 5, 136);
+  box-shadow: 0px 1px 20px rgb(9, 5, 136);
   width: 200px;
   padding: 15px;
   color: rgba(37, 6, 161, 0.653);
   font-size: larger;
-  border-color: rgba(0, 47, 255, 0.596);
+  border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }
@@ -229,12 +231,13 @@ textarea {
 .total-payment {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(81, 136, 5);
+  box-shadow: 0px 1px 20px rgb(81, 136, 5);
   width: 200px;
   padding: 15px;
   color: rgba(71, 161, 6, 0.653);
   font-size: larger;
-  border-color: rgba(136, 255, 0, 0.596);
+  border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }
@@ -242,12 +245,13 @@ textarea {
 .total-exams {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(5, 136, 136);
+  box-shadow: 0px 1px 20px rgb(5, 136, 136);
   width: 200px;
   padding: 15px;
   color: rgba(0, 0, 0, 0.653);
   font-size: larger;
-  border-color: rgba(0, 255, 255, 0.596);
+   border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }
@@ -255,12 +259,13 @@ textarea {
 .total-center {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(187, 2, 89);
+  box-shadow: 0px 1px 20px rgb(187, 2, 89);
   width: 200px;
   padding: 15px;
   color: rgb(0, 0, 0);
   font-size: larger;
-  border-color: rgba(255, 0, 149, 0.596);
+    border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }
@@ -268,12 +273,13 @@ textarea {
 .total-specalization {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(249, 0, 233);
+  box-shadow: 0px 1px 20px rgb(249, 0, 233);
   width: 200px;
   padding: 15px;
   color: rgba(181, 0, 242, 0.99);
   font-size: larger;
-  border-color: rgba(179, 0, 255, 0.993);
+   border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }
@@ -281,12 +287,13 @@ textarea {
 .total-specalization {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgb(249, 0, 233);
+  box-shadow: 0px 1px 20px rgb(249, 0, 233);
   width: 200px;
   padding: 15px;
   color: rgba(181, 0, 242, 0.99);
   font-size: larger;
-  border-color: rgba(179, 0, 255, 0.993);
+  border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }
@@ -294,12 +301,13 @@ textarea {
 .total-coordintator {
   font-weight: bold;
   background: #f5f5f5;
-  box-shadow: 0px 4px 8px rgba(253, 45, 236, 0.59);
+  box-shadow: 0px 1px 20px rgba(253, 45, 236, 0.59);
   width: 200px;
   padding: 15px;
   color: rgba(247, 86, 234, 0.99);
   font-size: larger;
-  border-color: rgba(255, 0, 238, 0.478);
+  border-color: rgba(114, 111, 111, 0.993);
+  border-style: dashed;
   border-radius: 20px;
   margin-left: 40px;
 }

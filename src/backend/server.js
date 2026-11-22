@@ -100,14 +100,91 @@ app.get("/examcenter", async (_, res) => {
 
 app.get("/totalstudent", async (_, res) => {
   try {
-    res.json(await query("SELECT COUNT(studenttable.ID)As totalStudent FROM studenttable"));
+    const rows = await query(
+      "SELECT COUNT(studenttable.ID) AS totalStudent FROM studenttable"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ totalStudent: Number(result?.totalStudent ?? 0) });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
 });
 
+app.get("/totalsubject",async(_,res)=>{
+    try {
+    const rows = await query(
+      "SELECT Count(subjecttable.ID) AS totalSubject FROM subjecttable"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ totalSubject: Number(result?.totalSubject ?? 0) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
+
+
+app.get("/totalpayment",async(_,res)=>{
+    try {
+    const rows = await query(
+      "SELECT Count(Paymenttable.ID) AS totalpayment FROM Paymenttable"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ totalpayment: Number(result?.totalpayment ?? 0) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
+
+app.get("/totalexams",async(_,res)=>{
+    try {
+    const rows = await query(
+      "SELECT Count(examstable.ID) AS totalexams FROM examstable"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ totalexams: Number(result?.totalexams ?? 0) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
+
+app.get("/totalcenter",async(_,res)=>{
+    try {
+    const rows = await query(
+      "SELECT Count(examcenter.ID) AS totalcenter FROM examcenter"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ totalcenter: Number(result?.totalcenter ?? 0) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
+
+app.get("/totalspecialization",async(_,res)=>{
+    try {
+    const rows = await query(
+      "SELECT Count(specializationtable.ID) AS totalspecialization FROM specializationtable"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ totalspecialization: Number(result?.totalspecialization ?? 0) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
+
+app.get("/totalcoordintator",async(_,res)=>{
+    try {
+    const rows = await query(
+      "SELECT Count(examcoordintator.ID) AS Totalcoordintator FROM examcoordintator"
+    );
+    const result = Array.isArray(rows) ? rows[0] : rows;
+    res.json({ Totalcoordintator: Number(result?.Totalcoordintator ?? 0) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
+
 const PORT = process.env.PORT || 3500;
 
 app.listen(PORT, () => {
-  console.log(`SVU API running on http://localhost:${PORT}`);
+console.log(`SVU API running on http://localhost:${PORT}`);
 });
