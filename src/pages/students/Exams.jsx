@@ -41,15 +41,13 @@ export default function Exams() {
             <TableHead>
               <TableRow>
                 <TableCell>name</TableCell>
-                <TableCell align="right">subjectname</TableCell>
-                <TableCell align="right">subjectcode</TableCell>
-                <TableCell align="right">email</TableCell>
-                <TableCell align="right">specialname</TableCell>
-                <TableCell align="right">code</TableCell>
-                <TableCell align="right">examdate</TableCell>
-                <TableCell align="right">starttime</TableCell>
-                <TableCell align="right">endtime</TableCell>
-                <TableCell align="right">status</TableCell>
+                <TableCell>subjectname</TableCell>
+                <TableCell>email</TableCell>
+                <TableCell>code</TableCell>
+                <TableCell>Date</TableCell>
+                <TableCell>starttime</TableCell>
+                <TableCell>endtime</TableCell>
+                <TableCell>status</TableCell>
               </TableRow>
             </TableHead>
 
@@ -59,21 +57,15 @@ export default function Exams() {
                   <TableCell component="th" scope="row">
                     {studentexams.name}
                   </TableCell>
-                  <TableCell align="right">
+                  <TableCell >
                     {studentexams.subjectname}
                   </TableCell>
-                  <TableCell align="right">
-                    {studentexams.subjectcode}
-                  </TableCell>
-                  <TableCell align="right">{studentexams.email}</TableCell>
-                  <TableCell align="right">
-                    {studentexams.specialname}
-                  </TableCell>
-                  <TableCell align="right">{studentexams.code}</TableCell>
-                  <TableCell align="right">{studentexams.examdate}</TableCell>
-                  <TableCell align="right">{studentexams.starttime}</TableCell>
-                  <TableCell align="right">{studentexams.endtime}</TableCell>
-                  <TableCell align="right">{studentexams.status}</TableCell>
+                  <TableCell>{studentexams.email}</TableCell>
+                  <TableCell>{studentexams.code}</TableCell>
+                  <TableCell>{studentexams.Date}</TableCell> 
+                  <TableCell>{studentexams.starttime}</TableCell>
+                  <TableCell>{studentexams.endtime}</TableCell>
+                  <TableCell>{studentexams.status}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

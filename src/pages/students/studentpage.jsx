@@ -48,11 +48,10 @@ export default function Student() {
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
-                <TableCell align="right">name</TableCell>
-                <TableCell align="right">email</TableCell>
-                <TableCell align="right">birthday</TableCell>
-                <TableCell align="right">stunumber</TableCell>
-                <TableCell align="right">gender</TableCell>
+                <TableCell >name</TableCell>
+                <TableCell >email</TableCell>
+                <TableCell >birthday</TableCell>
+                <TableCell >gender</TableCell>
               </TableRow>
             </TableHead>
 
@@ -62,11 +61,10 @@ export default function Student() {
                   <TableCell component="th" scope="row">
                     {studenttable.ID}
                   </TableCell>
-                  <TableCell align="right">{studenttable.name}</TableCell>
-                  <TableCell align="right">{studenttable.email}</TableCell>
-                  <TableCell align="right">{studenttable.birthday}</TableCell>
-                  <TableCell align="right">{studenttable.stunumber}</TableCell>
-                  <TableCell align="right">{studenttable.gender}</TableCell>
+                  <TableCell >{studenttable.name}</TableCell>
+                  <TableCell >{studenttable.email}</TableCell>
+                  <TableCell>{studenttable.birthday}</TableCell>
+                  <TableCell>{studenttable.gender}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

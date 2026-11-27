@@ -40,10 +40,10 @@ export default function Subject() {
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
-                <TableCell align="right">name</TableCell>
-                <TableCell align="right">credithours</TableCell>
-                <TableCell align="right">code</TableCell>
-                <TableCell align="right">Semester</TableCell>
+                <TableCell>name</TableCell>
+                <TableCell>credithours</TableCell>
+                <TableCell>code</TableCell>
+                <TableCell>Semester</TableCell>
               </TableRow>
             </TableHead>
 
@@ -53,12 +53,12 @@ export default function Subject() {
                   <TableCell component="th" scope="row">
                     {subjecttable.ID}
                   </TableCell>
-                  <TableCell align="right">{subjecttable.name}</TableCell>
-                  <TableCell align="right">
+                  <TableCell>{subjecttable.name}</TableCell>
+                  <TableCell>
                     {subjecttable.credithours}
                   </TableCell>
-                  <TableCell align="right">{subjecttable.code}</TableCell>
-                  <TableCell align="right">{subjecttable.Semester}</TableCell>
+                  <TableCell>{subjecttable.code}</TableCell>
+                  <TableCell>{subjecttable.Semester}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

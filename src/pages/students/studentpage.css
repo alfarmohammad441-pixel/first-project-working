@@ -311,3 +311,15 @@ textarea {
   border-radius: 20px;
   margin-left: 40px;
 }
+
+.tabl-payment{
+  border: 1px solid #e4e8ef;
+  border-radius: 20px;
+  background-color: brown;
+  align-content: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+  padding: 10px;
+  margin-top: 300px;
+}
+
+
